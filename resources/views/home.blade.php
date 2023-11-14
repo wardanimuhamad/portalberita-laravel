@@ -1,5 +1,5 @@
 @extends('layouts.general.layout')
-
+@section('page_title', 'Berita')
 @section('content')
     <h3>Daftar Artikel</h3>
     <div class="card-group">
