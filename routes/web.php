@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('news');
-});
+Route::get('/', [ArticleController::class, 'index']);
+Route::get('/article', [ArticleController::class, 'list']);
 
 Route::get('/home', function () {
     return view('home', [
