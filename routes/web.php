@@ -3,6 +3,8 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,9 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [ArticleController::class, 'index']);
 Route::get('/article', [ArticleController::class, 'list']);
+
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/category/{id}', [CategoryController::class, 'detail']);
 
 Route::get('/home', function () {
     return view('home', [

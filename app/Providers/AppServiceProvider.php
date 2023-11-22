@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
+use Exception;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        /*
+        try {
+            DB::connection()->getPDO();
+            dump('Database is connected. Database Name is : ' . DB::connection()->getDatabaseName());
+        } catch (Exception $e) {
+            dump('Database connection failed');
+        }
+        */
     }
 }
