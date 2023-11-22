@@ -16,13 +16,15 @@
         @include('layouts.general.header')
     </header>
     <main class="container">
-        <div class="container mt-5">
-            @yield('content')
+        <div class="vh-100">
+            <div class="container mt-5">
+                @yield('content')
+            </div>
         </div>
     </main>
 
     <div class="container-fluid">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center my-4 border-top">
+        <footer class="sticky-footer d-flex flex-wrap justify-content-between align-items-center my-4 border-top">
             @include('layouts.general.footer')
         </footer>
     </div>
