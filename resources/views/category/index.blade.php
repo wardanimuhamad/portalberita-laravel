@@ -6,7 +6,7 @@
             <h2>Daftar Kategori</h2>
         </div>
         <div class="col-2">
-            <a href="/add-category" class="btn btn-primary"><i class="bi bi-plus">Tambah Data Kategori</i></a>
+            <a href="/add-category" class="btn btn-primary"><i class="bi bi-plus">Tambah Data</i></a>
         </div>
     </div>
     <div class="my-3">
@@ -40,7 +40,8 @@
                     <td>{{ $category->name }}</td>
                     <td>{{ $category->description }}</td>
                     <td class="col-3 text-center">
-                        {{-- <a href="/category/{{ $category->id }}">Detail</a> --}}
+                        <a href="/category/{{ $category->id }}" class="btn btn-outline-primary btn-sm"><i
+                                class="bi bi-eyeglasses"></i> Detail</a>
                         <a href="/edit-category/{{ $category->id }}" class="btn btn-outline-primary btn-sm"><i
                                 class="bi bi-pencil-square"></i> Ubah</a>
                         <a href="/delete-category/{{ $category->id }}" class="btn btn-outline-primary btn-sm"><i
