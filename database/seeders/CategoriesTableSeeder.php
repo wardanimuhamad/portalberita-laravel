@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -40,7 +41,11 @@ class CategoriesTableSeeder extends Seeder
                 'updated_at' => Carbon::now()
             ]
         ];
-        DB::table('categories')->truncate();
-        DB::table('categories')->insert($data);
+        // DB::table('categories')->truncate();
+        // DB::table('categories')->insert($data);
+        Category::truncate();
+        Category::insert($data);
+        // menggunakan factory dan faker
+        // Category::factory()->count(50)->create();
     }
 }

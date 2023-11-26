@@ -1,10 +1,8 @@
-{{-- <div>
-    @dd($data);
-</div> --}}
 @extends('layouts.general.layout')
-@section('page_title', 'Artikel')
+@section('page_title', 'Detail Kategori')
 @section('content')
     <h3>Detail Kategori</h2>
+
         <div class="row">
             <div class="col-2 text-right">ID : </div>
             <div class="col-9">{{ $data->id }}</div>
@@ -19,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-2 d-flex justify-content-right mt-5 align-self-end">
-                <input type="button" value="Kembali" onclick="window.location.href='/categories'">
+                <a href="/categories" class="btn btn-secondary">Kembali</a>
             </div>
         </div>
     @endsection

@@ -22,6 +22,12 @@ Route::get('/article', [ArticleController::class, 'list']);
 
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/category/{id}', [CategoryController::class, 'detail']);
+Route::get('/add-category', [CategoryController::class, 'new']);
+Route::post('/category', [CategoryController::class, 'store']);
+Route::get('/edit-category/{id}', [CategoryController::class, 'edit']);
+Route::put('/category/{id}', [CategoryController::class, 'update']);
+Route::get('/delete-category/{id}', [CategoryController::class, 'delete']);
+Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
 
 Route::get('/home', function () {
     return view('home', [
