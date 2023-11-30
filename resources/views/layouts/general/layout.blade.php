@@ -15,19 +15,18 @@
     <header>
         @include('layouts.general.header')
     </header>
-    <main class="container">
-        <div class="vh-100">
+    <main class="flex-shrink-0" role="main">
+        <div class="container">
             <div class="container mt-5">
                 @yield('content')
             </div>
         </div>
     </main>
 
-    <div class="container-fluid">
-        <footer class="sticky-footer d-flex flex-wrap justify-content-between align-items-center my-4 border-top">
-            @include('layouts.general.footer')
-        </footer>
-    </div>
+    <footer class="sticky-footer d-flex flex-wrap justify-content-between align-items-center my-4 border-top">
+        @include('layouts.general.footer')
+    </footer>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

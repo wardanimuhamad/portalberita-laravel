@@ -17,7 +17,7 @@ use App\Http\Controllers\ProductsController;
 |
 */
 
-Route::get('/', [ArticleController::class, 'index']);
+//Route::get('/', [ArticleController::class, 'index']);
 Route::get('/article', [ArticleController::class, 'list']);
 
 Route::get('/categories', [CategoryController::class, 'index']);
@@ -59,8 +59,23 @@ Route::get('/home', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.index');
+    })->name('dashboard');
+});
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// });
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
 Route::get('/biodata', function () {
